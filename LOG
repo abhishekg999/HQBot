@@ -1,0 +1,165 @@
+FAIL 1: Doesnt check for mulitple words, checks the entire option string
+	1938 arcade game sponsored major beverage company players
+
+	*serve beers : 36
+	work as a bouncer : 257
+	race cyclesdale : \/
+
+STATUS : FIXED
+
+
+FAIL 2: Found it, but didn't check for the entire book name, removed the "and"
+
+	https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea
+	https://en.wikipedia.org/wiki/Animal_Farm
+	https://en.wikipedia.org/wiki/War_and_Peace
+	classic books longest site:wikipedia.org
+	https://en.wikipedia.org/wiki/List_of_longest_novels
+
+	 Which of these classic books is the longest?
+
+	the old man and the sea
+	{u'*war and peace': 49011, u'the old man and the sea': 101509, u'animal farm': 29}
+
+Thead 4 had war and peace written in it, but didn't succeed in identifing it...
+War and Peace --> War Peace 
+
+~dont remove and for smart search 
+
+STATUS : NOT FIXED
+
+FAIL 3: USER ERROR -- TOO SLOW
+
+STATUS : NOT FIXED
+
+FAIL 4: GOT THE WRONG ANSWER BY A LARGE MARGIN | URL HTTP REQUEST SENT WITHOUT HEADERS - HTTP 403 FORBIDDEN
+
+https://en.wikipedia.org/wiki/Nobody_(Rick_Ross_song)
+https://en.wikipedia.org/wiki/Mission_statement
+https://en.wikipedia.org/wiki/Absolutely_Anything
+phrase completes edwin starr’s classic rock lyric "war good for ”
+http://www.progarchives.com/album.asp?id=7510
+HTTP Error 403: Forbidden
+
+ What phrase completes Edwin Starr’s classic rock lyric, "War, what is it good for?”
+
+no clear purpose
+{u'totally nobody': 51, u'*absolutely nothing': 7774, u'no clear purpose': 465647}
+
+STATUS : FIXED I THINK
+
+FAIL 5:
+https://en.wikipedia.org/wiki/Heat_transfer
+https://en.wikipedia.org/wiki/Searing
+https://en.wikipedia.org/wiki/Smoking
+cooking techniques typically described “low slow”
+https://www.getflavor.com/low-slow/
+
+ Which of these cooking techniques is typically described as “low and slow”?
+
+direct heat
+{u'direct heat': 24517, u'smoking': 10509, u'searing': 1338}m
+
+FAIL 6:
+
+brand names derived nickname moonshine
+https://www.thespiritsbusiness.com/2014/08/top-10-funny-spirits-names/
+https://en.wikipedia.org/wiki/Hawaiian_Punch
+https://en.wikipedia.org/wiki/Mountain_Dew
+https://en.wikipedia.org/wiki/Minute_Maid
+{u'hawaiian punch': 24, u'mountain dew': 48, u'minute maid': 740}
+{u'hawaiian punch': 0, u'mountain dew': 0, u'minute maid': 0}
+
+ Which of these brand names is derived from a nickname for moonshine?
+
+minute maid
+{u'hawaiian punch': 24, u'mountain dew': 48, u'minute maid': 740}
+
+FAIL 7:
+
+cities higher population than us army
+https://en.wikipedia.org/wiki/List_of_U.S._cities_with_large_African-American_populations
+https://en.wikipedia.org/wiki/San_Francisco
+https://en.wikipedia.org/wiki/Austin,_Texas
+https://en.wikipedia.org/wiki/San_Diego
+{u'san francisco': 1123, u'san diego': 448, u'austin': 1254}
+{u'san francisco': 0, u'san diego': 0, u'austin': 0}
+
+ Which of these cities has  a higher population than the US Army?
+
+austin
+{u'san francisco': 1123, u'san diego': 448, u'austin': 1254}
+
+
+FAIL 8:
+prop involved playground game “double dutch”
+https://www.wired.com/2013/03/30-classic-games-for-simple-outdoor-play/
+<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:661)>
+https://en.wikipedia.org/wiki/Jacks
+https://en.wikipedia.org/wiki/Double_Dutch_(jump_rope)
+https://en.wikipedia.org/wiki/Yo-yo
+{u'jumprope': 1325, u'yo-yo': 6, u'jacks': 51}
+{u'jumprope': 0, u'yo-yo': 0, u'jacks': 7000}
+
+ What prop is involved in the playground game “Double Dutch”?
+
+jacks
+{u'jumprope': 1325, u'yo-yo': 6, u'jacks': 7051}
+
+FAIL 9: HUMAN ERROR -- NO FIX NEEDED
+
+FAIL 10:
+By deﬁnition an unctuous person gives too many what
+https://www.dailywritingtips.com/unctuous-a-humpty-dumpty-word/
+By deﬁnition an unctuous person gives too many what site:wikipedia.org
+https://en.wikipedia.org/wiki/Task
+https://en.wikipedia.org/wiki/Personally_identifiable_information
+https://en.wikipedia.org/wiki/Wiktionary:compliment
+{u'personal details': 488, u'tasks': 232, u'compliments': 256}
+{u'personal details': 0, u'tasks': 0, u'compliments': 0}
+personal details
+{u'personal details': 488, u'tasks': 232, u'compliments': 256}
+
+FAIL 11: HUMAN ERROR
+
+FAIL 12: 
+Of these historical accessories which is worn on a different body part ihan the other two
+https://en.wikipedia.org/wiki/Cravat
+https://en.wikipedia.org/wiki/Buskin
+http://animalcrossing.wikia.com/wiki/Historical_Clothing
+https://en.wikipedia.org/wiki/Cravat
+{u'buskin': 19419, u'cravat': 29030, u'steinkirk': 27773}
+{u'buskin': 0, u'cravat': 0, u'steinkirk': 0}
+cravat
+{u'buskin': 19419, u'cravat': 29030, u'steinkirk': 27773}
+
+FAIL 13: HUMAN ERRORS
+
+FAIL 14: 
+If you have European ancestry you are almost certainly descended from which of these historical ﬁgures
+https://blogs.ancestry.com/ancestry/2017/09/04/more-than-a-pie-chart-and-a-number-reading-your-ethnicity-estimate/
+If you have European ancestry you are almost certainly descended from which of these historical ﬁgures site:wikipedia.org
+https://en.wikipedia.org/wiki/Charlemagne
+https://en.wikipedia.org/wiki/Anne_Boleyn
+https://en.wikipedia.org/wiki/Joan_of_Arc
+{u'anne boleyn': 3254, u'joan of arc': 3397, u'charlemagne': 1926}
+{u'anne boleyn': 0, u'joan of arc': 0, u'charlemagne': 0}
+joan of arc
+{u'anne boleyn': 3254, u'joan of arc': 3397, u'charlemagne': 1926}
+
+FAIL 15: HUMAN EROOR
+
+FAIL 16: CLOSE!!
+Which classic story was written by the co author of a famous writing guide
+https://www.oxford-royale.co.uk/articles/guide-britains-famous-writers-history.html
+https://en.wikipedia.org/wiki/Stuart_Little_(film)
+https://en.wikipedia.org/wiki/A_Wrinkle_in_Time_(2018_film)
+https://en.wikipedia.org/wiki/The_Wind_in_the_Willows
+Which classic story was written by the co author of a famous writing guide site:wikipedia.org
+{u'a wrinkle in time': 29724, u'stuart little': 20969, u'the wind in the willows': 16813}
+{u'a wrinkle in time': 0, u'stuart little': 0, u'the wind in the willows': 0}
+a wrinkle in time
+{u'a wrinkle in time': 29724, u'stuart little*': 20969, u'the wind in the willows': 16813}
+
+
+FAIL 17: TOO GODDAMN SLOW BUT GOT IT RIGHT
